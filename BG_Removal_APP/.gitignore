@@ -1,0 +1,43 @@
+# --- Dependencies (Bahut Zaroori) ---
+node_modules/
+.pnp
+.pnp.js
+
+# --- Environment Variables (SECURITY RISK - DO NOT UPLOAD) ---
+# Ye sabse important part hai. Clerk keys aur Mongo URI yahin hotay hain.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# --- Production Build ---
+# React jab build banata hai, wo files git par nahi jani chahiye
+build/
+dist/
+
+# --- Testing ---
+coverage/
+
+# --- Logs (Error files) ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs
+*.log
+npm-debug.log
+
+# --- Editor & OS Files (Junk files) ---
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# --- Clerk Specific (Rare cases) ---
+# Sometimes Clerk generates local files, though usually it's just .env
+.clerk/
