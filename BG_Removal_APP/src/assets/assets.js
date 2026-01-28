@@ -1,7 +1,7 @@
-import logo from './logo.svg'
+import logo from './newlog.png'
 import logo_icon from './logo_icon.svg'
 import arrow_icon from './arrow_icon.svg'
-import header_img from './header_img.png'
+import header_img from './header.png'
 import remove_bg_icon from './remove_bg_icon.svg'
 import upload_btn_icon from './upload_btn_icon.svg'
 import upload_icon from './upload_icon.svg'
@@ -14,6 +14,7 @@ import twitter_icon from './twitter_icon.svg'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import credit_icon from './credit_icon.png'
+
 
 export const assets = {
     logo,
@@ -29,7 +30,8 @@ export const assets = {
     google_plus_icon,
     twitter_icon,
     upload_btn_icon,
-    credit_icon
+    credit_icon,
+    header_img
 }
 
 export const testimonialsData = [
