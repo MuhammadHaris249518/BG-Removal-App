@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Steps from '../components/steps';
 import BgSlider from '../components/BgSlider';
 import Testemonials from '../components/Testemonials';
+import Upload from '../components/upload';
+import Footer from '../components/footer';
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
         <Steps/>
         <BgSlider/>
         <Testemonials/>
+        <Upload/>
+        
     </div>
   )
 }

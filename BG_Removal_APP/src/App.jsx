@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import  Result from './pages/Result'
 import Buycredit from './pages/buycredit';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
  const App = () => {
   return (
     <div className='min-h-screen bg-slate-50'>
@@ -18,7 +19,7 @@ import Navbar from './components/navbar';
 
 
       </Routes>
-
+  <Footer/>
 
 
     </div>
