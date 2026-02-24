@@ -17,11 +17,18 @@ const Result = () => {
     <div className=' flex flex-col'>
       <p className=' font-semibold text-gray-600 mb-2'>Background removed</p>
       <div className='rounded-md border border-gray-300 h-full relative bg-layer overflow-hidden'>
-      {/* <img src={assets.image_wo_bg} alt="" /> */}
+      <img src={assets.image_wo_bg} alt="" />
       <div className='absolute right-0.5 bottom-0.5 transform translate-x-0.5 translate-y-0.5'></div>
+    <div className='border-4 border-violet-600 rounded-full h-12 w-12 border-t-transparent animate-spin'></div>
       </div>
     </div>
+   
   </div>
+   <div className='flex justify-center sm:justify-end items-center flex-wrap gap-4 mt-6'>
+      <button className='px-8 py-2.5 text-violet
+      -600 text-sm border border-blue-600 rounded-full hover:scale-105 transition-all duration-700'>Try another image</button>
+      <a className='px-8 py-2.5 text-white text-sm from bg-blue-600 to-pink-500 rounded-full hover:scale-105 transition-all duration-700' href="">Download Image</a>
+    </div> 
 </div>
     </div>
   )
