@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 const userSchema=new mongoose.Schema({
     clerkId:{type:String,required:true,unique:true},
     email:{type:String,required:true,unique:true},
@@ -9,3 +9,4 @@ const userSchema=new mongoose.Schema({
     
     
 })
+const userModel=mongoose.models.user||mongoose.model("user",userSchema)
