@@ -2,9 +2,19 @@ import React from 'react'
 import { assets } from '../assets/assets';
 import { Link } from 'react-router-dom';
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react';
+import { useContext } from 'react';
+import { Appcontext } from '../context/Appcontext';
+import { useEffect } from 'react';
 const Navbar = () => {
   const {openSignIn}=useClerk();
   const{isSignedIn,user}=useUser();
+  const {credit,localCreditData}=useContext(Appcontext)
+  useEffect(()=>{
+    if(isSignedIn){
+      localCreditData()
+    }
+
+  },[isSignedIn])
   return (
     <div className='flex items-center justify-between mx-6 py-5 lg:mx-44'>
         <Link to='/' className='hover:scale-105 active:scale-95 hover:drop-shadow-x1 transition-all duration-300 inline-block'><img className='w-36 sm:w-48 md:w-52 lg:w-60 'src={assets.logo} alt="" /></Link>
