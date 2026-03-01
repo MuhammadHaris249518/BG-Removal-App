@@ -12,7 +12,7 @@ const Header = () => {
               </p>
               <div>
                 <input type="file" name="" id="upload" className='hidden' />
-                <label className='inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 hover:scale-105 transition-all duration-300 ' htmlFor="upload">
+                <label className='inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-linear-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 hover:scale-105 transition-all duration-300 ' htmlFor="upload">
                     <img width={20} src={assets.upload_btn_icon} alt="" />
                      <p className='text-white text-sm'>Upload your image</p>
                 </label>

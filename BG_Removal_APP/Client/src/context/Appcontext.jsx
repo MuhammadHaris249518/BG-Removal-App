@@ -2,16 +2,16 @@ import { useState } from "react";
 import {useAuth} from '@clerk/clerk-react'
 import { createContext } from "react";
 import axios from "axios";
-import {toast} from 'react-tostify'
+import {toast} from 'react-toastify'
 export const Appcontext=createContext()
 const Appcontextprovider=(props)=>{
-    const[credit,setCredit]=useState(false)
+    const[credit,setCredit]=useState(0)
     const backendUrl=import.meta.env.VITE_BACKEND_URL
     const {getToken}=useAuth()
     const loadCreditsData=async()=>{
   try {
     const token=await getToken()
-    const {data}=await axios.get(backedUrl+'/api/user/credits',{headers:{token}})
+    const {data}=await axios.get(backendUrl+'/api/user/credits',{headers:{token}})
     if(data.success){
         setCredit(data.credits)
         console.log(data.credits)
