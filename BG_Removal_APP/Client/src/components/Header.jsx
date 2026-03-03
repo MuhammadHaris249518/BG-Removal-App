@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
+import { Appcontext } from '../context/Appcontext'
 
 const Header = () => {
+  const{removeBg}=useContext(Appcontext)
+  
   return (
     <div className='flex items-center justify-between flex-col-reverse lg:flex-row gap-y-10 px-4 mt-10 lg:px-44 sm:mt-20'>
         {/*--------Left side--------  */}
@@ -11,7 +14,7 @@ const Header = () => {
                 Upload any image and get clean, transparent results in seconds. <br className='max-sm:hidden' /> No Photoshop or technical skills required.
               </p>
               <div>
-                <input type="file" name="" id="upload" className='hidden' />
+                <input onChange={e=>removeBg(e.target.files[0])} type="file" accept='image/*' name="" id="upload" className='hidden' />
                 <label className='inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-linear-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 hover:scale-105 transition-all duration-300 ' htmlFor="upload">
                     <img width={20} src={assets.upload_btn_icon} alt="" />
                      <p className='text-white text-sm'>Upload your image</p>

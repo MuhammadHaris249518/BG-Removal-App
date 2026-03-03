@@ -6,6 +6,10 @@ const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   photo: String,
+  credits: { 
+    type: Number, 
+    default: 5   // 🔥 Every new user gets 5 credits automatically
+  }
 }, { timestamps: true });
 
 const userModel = mongoose.models.user || mongoose.model("user", userSchema);
